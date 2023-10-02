@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@media (max-width: 700px) {
+    main {
+        display: block;
+    }
+}
+
+aside {
+    display: flex;
+    width: 40%;
+    height: 22rem;
+    background-color: aqua;
+}
+
+#palavra,
+#dica {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+#teclado {
+    display: grid;
+    grid-template-columns: repeat(9, 0.5fr);
+    gap: 0.5rem;
+    width: 40%;
+}
