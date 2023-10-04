@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/jogo.css">
-    <link rel="stylesheet" href="css/corpo.css">
-    <script src="js/jogo.js" defer></script>
+    <link rel="stylesheet" href="src/css/jogo.css">
+    <link rel="stylesheet" href="src/css/resultado.css">
+    <script src="src/js/jogo.js" defer></script>
+    <script src="src/js/listaPalavras.js"></script>
     <title>Jogo da forca</title>
   </head>
   <body>
@@ -15,55 +16,34 @@
     </header>
 
     <main>
+      <div id="finalizar">
+        <div id="conteudo">
+          <img src="src/img/john-lost.gif" alt="gif" />
+          <h4>Fim de Jogo!</h4>
+          <p>A palavra correta era: <strong>rainbow</strong></p>
+
+          <button class="play-again">Play Again</button>
+        </div>
+      </div>
+
       <aside>
-        <img src="svg/hangman-0.svg" alt="Homem enforcado, inicial">
+        <img src="src/svg/hangman-0.svg" alt="Homem enforcado, inicial">
       </aside>
       
       <div>
         <section>
           <ul id="palavra"></ul>
 
-          <h4  id="dica">Dicas</h4>
-          <h4></h4>
+          <h4  id="dica">
+            Dica: 
+            <span></span>
+          </h4>
+          <h4 id="tentativas_erradas">
+            Incorretas: <span> 0/6</span>
+          </h4>
         </section>
 
-        <section id="teclado">
-          <button type="button" value="A" class="botao btn btn-primary">A</button>
-          <button type="button" value="B" class="botao btn btn-primary">B</button>
-          <button type="button" value="C" class="botao btn btn-primary">C</button>
-
-          <button type="button" value="Ç" class="botao btn btn-primary">Ç</button>
-          <button type="button" value="D" class="botao btn btn-primary">D</button>
-          <button type="button" value="E" class="botao btn btn-primary">E</button>
-
-          <button type="button" value="F" class="botao btn btn-primary">F</button>
-          <button type="button" value="G" class="botao btn btn-primary">G</button>
-          <button type="button" value="H" class="botao btn btn-primary">H</button>
-
-          <button type="button" value="I" class="botao btn btn-primary">I</button>
-          <button type="button" value="J" class="botao btn btn-primary">J</button>
-          <button type="button" value="K" class="botao btn btn-primary">K</button>
-
-          <button type="button" value="L" class="botao btn btn-primary">L</button>
-          <button type="button" value="M" class="botao btn btn-primary">M</button>
-          <button type="button" value="N" class="botao btn btn-primary">N</button>
-
-          <button type="button" value="O" class="botao btn btn-primary">O</button>
-          <button type="button" value="P" class="botao btn btn-primary">P</button>
-          <button type="button" value="Q" class="botao btn btn-primary">Q</button>
-
-          <button type="button" value="R" class="botao btn btn-primary">R</button>
-          <button type="button" value="S" class="botao btn btn-primary">S</button>
-          <button type="button" value="T" class="botao btn btn-primary">T</button>
-
-          <button type="button" value="U" class="botao btn btn-primary">U</button>
-          <button type="button" value="V" class="botao btn btn-primary">V</button>
-          <button type="button" value="W" class="botao btn btn-primary">W</button>
-
-          <button type="button" value="X" class="botao btn btn-primary">X</button>
-          <button type="button" value="Y" class="botao btn btn-primary">Y</button>
-          <button type="button" value="Z" class="botao btn btn-primary">Z</button>
-        </section>
+        <section id="teclado"></section>
       </div>
     </main>
     <footer></footer>

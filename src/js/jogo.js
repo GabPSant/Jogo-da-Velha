@@ -1,0 +1,102 @@
+const palavra = document.querySelector("#palavra");
+const imagemEnforcado = document.querySelector("aside").querySelector("img");
+const incorretas = document.querySelector("#tentativas_erradas").querySelector("span");
+const finalizar = document.querySelector("#finalizar");
+
+let palavraAtual, letrasCorretas, tentativas;
+const tentativasMaximas = 6;
+
+function criarTeclado() {
+    const teclado = document.getElementById("teclado");
+  
+    for (let index = 65; index < 91; index++) {
+      const letra = String.fromCharCode(index)
+      const buttonElement = `<button type="button" class="btn btn-primary botao" value="${letra}">${letra}</button>`
+  
+      teclado.innerHTML += buttonElement;
+    }
+}
+  
+criarTeclado();
+
+function resetarJogo (){
+    letrasCorretas = [];
+    tentativas = 0;
+
+    imagemEnforcado.src = `src/svg/hangman-${tentativas}.svg`;
+    incorretas.innerText = `${tentativas} / ${tentativasMaximas}`;
+    botoes.forEach((btn) => {btn.disabled = false});
+
+    palavra.innerHTML = palavraAtual.split('').map(() => `<li class="letra"><li>`).join('');
+    
+    finalizar.classList.remove("show");
+}
+
+function palavraAleatoria(){
+    const {palavra, dica} = listaPalavras[Math.floor(Math.random()*listaPalavras.length)];
+
+    palavraAtual = palavra;
+
+    document.querySelector("#dica").querySelector("span").innerText = dica;
+
+    resetarJogo();
+}
+
+function fimDeJogo(resultado){
+    setTimeout(() =>{
+        const textoResultado = resultado?"Você encontrou a palavra: ": "A palavra certa era: ";
+        finalizar.querySelector("img").src = `img/${resultado?"victory-drama":"john-lost"}.gif`;
+        finalizar.querySelector("h4").innerText = `${resultado?"Parabéns!":"Fim de jogo!"}`;
+        finalizar.querySelector("p").innerHTML = `${textoResultado} <strong>${palavraAtual}</strong>`;
+        finalizar.classList.add("show");
+    },300);
+}
+
+function iniciarJogo (botao, letraClicada){
+    if(palavraAtual.includes(letraClicada)){
+        [...palavraAtual].forEach((letra,index) =>{
+            if(letra === letraClicada){
+                letrasCorretas.push(letra);
+                palavra.querySelectorAll("li")[index].innerHTML = letra;
+                palavra.querySelectorAll("li")[index].classList.add("adivinhado");
+            }
+        });
+    }
+    else{
+        tentativas++;
+        imagemEnforcado.src = `src/svg/hangman-${tentativas}.svg`;
+    }
+    botao.disabled = true;
+    incorretas.innerText = `${tentativas}/${tentativasMaximas}`;
+
+    if(tentativas == tentativasMaximas) return fimDeJogo(false);
+    if(letrasCorretas.length === palavraAtual.length) return fimDeJogo(true);
+}
+
+const botoes = document.querySelectorAll(".botao");
+
+botoes.forEach(botao => {
+    botao.addEventListener("click", evento =>{
+        console.log(evento.target);
+        iniciarJogo(evento.target, botao.innerHTML);
+    })
+})
+
+
+//Avaliar como fazer no teclado
+document.addEventListener('keydown', evento =>{
+    let chave = evento.key;
+
+    if(/^([A-Z]){1}$/.test(chave) || chave == "Ç"){
+        palavra.innerHTML += chave;
+    }
+    else if(/^([a-z]){1}$/.test(chave) || chave == "ç"){
+        chave = chave.toUpperCase();
+        palavra.innerHTML += chave;
+    }
+    console.log(chave);
+    console.log(/^([a-z]|[A-Z]){1}$/.test(chave));
+})
+
+palavraAleatoria();
+
