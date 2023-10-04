@@ -1,6 +1,8 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
@@ -23,12 +25,35 @@ main {
 
 aside {
     display: flex;
-    width: 22rem;
-    height: 22rem;
-    background-color: aqua;
+    width: 20rem;
+    height: 20rem;
 }
 
-#palavra,
+aside>img{
+    max-width: 270px;
+}
+
+main>div{
+    margin-top: 3rem;
+}
+
+#palavra {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+  }
+
+#palavra, #letra{
+    width: 28px;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 3px solid #000;
+}
+
 #dica {
     text-align: center;
     padding: 1rem 0;
@@ -38,5 +63,13 @@ aside {
     display: grid;
     grid-template-columns: repeat(9, 0.5fr);
     gap: 0.5rem;
-    width: 40%;
+    
+}
+
+.underline {
+    color: transparent;
+    border-radius: 1rem;
+    width: 20px;
+    height: 2.4px;
+    background: black;
 }
