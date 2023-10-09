@@ -11,6 +11,7 @@ const tentativasMaximas = 6;
 
 function criarTeclado() {
   const teclado = document.getElementById("teclado");
+  teclado.innerHTML = null;
 
   for (let index = 65; index < 91; index++) {
     const letra = String.fromCharCode(index);
@@ -30,6 +31,15 @@ function resetarJogo() {
   incorretas.innerText = `${tentativas} / ${tentativasMaximas}`;
   botoes.forEach((btn) => {
     btn.disabled = false;
+    console.log(btn.classList.contains("btn-sucess"));
+    if (
+      btn.classList.contains("btn-success") ||
+      btn.classList.contains("btn-danger")
+    ) {
+      btn.classList.remove("btn-success");
+      btn.classList.remove("btn-danger");
+      btn.classList.add("btn-primary");
+    }
   });
   palavra.innerHTML = palavraAtual
     .split("")
@@ -65,7 +75,8 @@ function fimDeJogo(resultado) {
     finalizar.querySelector(
       "p"
     ).innerHTML = `${textoResultado} <strong>${palavraAtual}</strong>`;
-    jogarNovamente.addEventListener("click", palavraAleatoria);
+
+    jogarNovamente.addEventListener("click", getPalavraAleatoria);
     finalizar.classList.add("show");
   }, 300);
 }
@@ -77,17 +88,27 @@ function iniciarJogo(botao, letraClicada) {
         letrasCorretas.push(letra);
         palavra.querySelectorAll("li")[index].innerHTML = letra;
         palavra.querySelectorAll("li")[index].classList.add("adivinhado");
+        botao.classList.remove("btn-primary");
+        botao.classList.add("btn-success");
       }
     });
   } else {
     tentativas++;
+    botao.classList.remove("btn-primary");
+    botao.classList.add("btn-danger");
     imagemEnforcado.src = `src/svg/hangman-${tentativas}.svg`;
   }
   botao.disabled = true;
   incorretas.innerText = `${tentativas}/${tentativasMaximas}`;
 
-  if (tentativas == tentativasMaximas) return fimDeJogo(false);
-  if (letrasCorretas.length === palavraAtual.length) return fimDeJogo(true);
+  if (tentativas >= tentativasMaximas) {
+    botoes.disabled = true;
+    return fimDeJogo(false);
+  }
+  if (letrasCorretas.length === palavraAtual.length) {
+    botoes.disabled = true;
+    return fimDeJogo(true);
+  }
 }
 
 const botoes = document.querySelectorAll(".botao");
@@ -98,7 +119,7 @@ botoes.forEach((botao) => {
     (e) => {
       let chave = e.key.toUpperCase();
 
-      if (/^([A-Z]|[a-z]){1}$/.test(chave) && chave == botao.innerText) {
+      if (/^([A-Z]){1}$/.test(chave) && chave == botao.innerText) {
         //Tentar resolver o problema das letras repetidas
         botao.click();
       }

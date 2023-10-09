@@ -129,6 +129,10 @@ main div {
   margin: -40px 0 35px;
 }
 
+.botoes {
+  background-color: green !important;
+}
+
 #dica {
   text-align: center;
   padding: 1rem 0;
