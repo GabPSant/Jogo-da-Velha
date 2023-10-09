@@ -2,6 +2,7 @@ const palavra = document.querySelector("#palavra");
 const imagemEnforcado = document.querySelector("aside").querySelector("img");
 const incorretas = document.querySelector("#tentativas_erradas").querySelector("span");
 const finalizar = document.querySelector("#finalizar");
+const jogarNovamente = document.querySelector(".play-again");
 
 let palavraAtual, letrasCorretas, tentativas;
 const tentativasMaximas = 6;
@@ -11,7 +12,7 @@ function criarTeclado() {
   
     for (let index = 65; index < 91; index++) {
       const letra = String.fromCharCode(index)
-      const buttonElement = `<button type="button" class="btn btn-primary botao" value="${letra}">${letra}</button>`
+      const buttonElement = `<button type="button" class="btn btn-primary botao">${letra}</button>`
   
       teclado.innerHTML += buttonElement;
     }
@@ -26,9 +27,9 @@ function resetarJogo (){
     imagemEnforcado.src = `src/svg/hangman-${tentativas}.svg`;
     incorretas.innerText = `${tentativas} / ${tentativasMaximas}`;
     botoes.forEach((btn) => {btn.disabled = false});
-
-    palavra.innerHTML = palavraAtual.split('').map(() => `<li class="letra"><li>`).join('');
+    palavra.innerHTML = palavraAtual.split("").map(() => `<li class="letra"></li>`).join("");
     
+    console.log(palavra.innerHTML);
     finalizar.classList.remove("show");
 }
 
@@ -45,15 +46,16 @@ function palavraAleatoria(){
 function fimDeJogo(resultado){
     setTimeout(() =>{
         const textoResultado = resultado?"Você encontrou a palavra: ": "A palavra certa era: ";
-        finalizar.querySelector("img").src = `img/${resultado?"victory-drama":"john-lost"}.gif`;
+        finalizar.querySelector("img").src = `src/img/${resultado?"victory-drama":"john-lost"}.gif`;
         finalizar.querySelector("h4").innerText = `${resultado?"Parabéns!":"Fim de jogo!"}`;
         finalizar.querySelector("p").innerHTML = `${textoResultado} <strong>${palavraAtual}</strong>`;
+        jogarNovamente.addEventListener("click", palavraAleatoria);
         finalizar.classList.add("show");
     },300);
 }
 
 function iniciarJogo (botao, letraClicada){
-    if(palavraAtual.includes(letraClicada)){
+    if(String(palavraAtual).includes(letraClicada)){
         [...palavraAtual].forEach((letra,index) =>{
             if(letra === letraClicada){
                 letrasCorretas.push(letra);
@@ -82,21 +84,19 @@ botoes.forEach(botao => {
     })
 })
 
-
 //Avaliar como fazer no teclado
 document.addEventListener('keydown', evento =>{
     let chave = evento.key;
 
-    if(/^([A-Z]){1}$/.test(chave) || chave == "Ç"){
-        palavra.innerHTML += chave;
+    if(/^([A-Z]){1}$/.test(chave) || chave == "Ç"){//Tentar resolver o problema das letras repetidas
+        iniciarJogo(evento.target, chave);
     }
     else if(/^([a-z]){1}$/.test(chave) || chave == "ç"){
         chave = chave.toUpperCase();
-        palavra.innerHTML += chave;
+        iniciarJogo(evento.target, chave);
     }
     console.log(chave);
     console.log(/^([a-z]|[A-Z]){1}$/.test(chave));
 })
 
 palavraAleatoria();
-

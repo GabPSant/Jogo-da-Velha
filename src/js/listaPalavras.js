@@ -1,30 +1,31 @@
 const listaPalavras = [
     {
-      palavra: "Computador",
+      palavra: "COMPUTADOR",
       dica: "Dispositivo eletrônico usado para processamento de dados.",
     },
-    { palavra: "Girafa", 
+    { palavra: "GIRAFA", 
     dica: "Um animal de pescoço longo encontrado na África." 
     },
-    { palavra: "Piano", 
+    { palavra: "PIANO", 
     dica: "Um instrumento musical de teclas." 
     },
     {
-      palavra: "Montanha",
+      palavra: "MONTANHA",
       dica: "Uma elevação natural da terra, geralmente com picos.",
     },
-    { palavra: "Cachoeira", 
-        dica: "Uma queda d'água natural em um rio ou riacho." 
+    { palavra: "CACHOEIRA", 
+      dica: "Uma queda d'água natural em um rio ou riacho." 
     },
-    { palavra: "Amizade", dica: "Um relacionamento afetuoso entre amigos." },
+    { palavra: "AMIZADE", 
+      dica: "Um relacionamento afetuoso entre amigos." },
     {
-      palavra: "Astronomia",
+      palavra: "ASTRONOMIA",
       dica: "A ciência que estuda os corpos celestes no universo.",
     },
-    { palavra: "Jardim", dica: "Um espaço cultivado com plantas e flores." },
+    { palavra: "JARDIM", dica: "Um espaço cultivado com plantas e flores." },
     {
-      palavra: "Viagem",
+      palavra: "VIAGEM",
       dica: "Uma jornada ou deslocamento de um lugar para outro.",
     },
-    { palavra: "Felicidade", dica: "Um estado de contentamento e alegria." },
+    { palavra: "FELICIDADE", dica: "Um estado de contentamento e alegria." },
   ];
