@@ -1,3 +1,5 @@
+import conjunto from './palavras.json' assert {type: "json"};//Depois mandar o JSON para o discord do grupo da Softex
+
 const palavra = document.querySelector("#palavra");
 const imagemEnforcado = document.querySelector("aside").querySelector("img");
 const incorretas = document
@@ -32,15 +34,13 @@ function resetarJogo() {
   botoes.forEach((btn) => {
     btn.disabled = false;
     console.log(btn.classList.contains("btn-sucess"));
-    if (
-      btn.classList.contains("btn-success") ||
-      btn.classList.contains("btn-danger")
-    ) {
+    if (btn.classList.contains("btn-success") ||btn.classList.contains("btn-danger")) {
       btn.classList.remove("btn-success");
       btn.classList.remove("btn-danger");
       btn.classList.add("btn-primary");
     }
   });
+
   palavra.innerHTML = palavraAtual
     .split("")
     .map(() => `<li class="letra"></li>`)
@@ -52,9 +52,9 @@ function resetarJogo() {
 
 function getPalavraAleatoria() {
   const { palavra, dica } =
-    listaPalavras[Math.floor(Math.random() * listaPalavras.length)];
+    conjunto.palavras[Math.floor(Math.random() * conjunto.palavras.length)];
 
-  palavraAtual = palavra;
+  palavraAtual = palavra.toUpperCase();
 
   document.querySelector("#dica").querySelector("span").innerText = dica;
 
@@ -66,12 +66,15 @@ function fimDeJogo(resultado) {
     const textoResultado = resultado
       ? "Você encontrou a palavra: "
       : "A palavra certa era: ";
-    finalizar.querySelector("img").src = `src/img/${
+    
+      finalizar.querySelector("img").src = `src/img/${
       resultado ? "victory-drama" : "john-lost"
     }.gif`;
+    
     finalizar.querySelector("h4").innerText = `${
       resultado ? "Parabéns!" : "Fim de jogo!"
     }`;
+    
     finalizar.querySelector(
       "p"
     ).innerHTML = `${textoResultado} <strong>${palavraAtual}</strong>`;
@@ -98,6 +101,7 @@ function iniciarJogo(botao, letraClicada) {
     botao.classList.add("btn-danger");
     imagemEnforcado.src = `src/svg/hangman-${tentativas}.svg`;
   }
+  
   botao.disabled = true;
   incorretas.innerText = `${tentativas}/${tentativasMaximas}`;
 
