@@ -1,4 +1,4 @@
-import conjunto from './palavras.json' assert {type: "json"};//Depois mandar o JSON para o discord do grupo da Softex
+import conjunto from './json/palavras.json' assert {type: "json"};//Depois mandar o JSON para o discord do grupo da Softex
 
 const palavra = document.querySelector("#palavra");
 const imagemEnforcado = document.querySelector("aside").querySelector("img");
