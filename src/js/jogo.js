@@ -142,3 +142,4 @@ botoes.forEach((botao) => {
 //Avaliar como fazer no teclado
 
 getPalavraAleatoria();
+
