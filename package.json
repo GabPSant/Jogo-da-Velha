@@ -1,0 +1,15 @@
+{
+  "name": "jogo-da-forca",
+  "version": "1.0.0",
+  "description": "- Jogo da forca feito usando HTML, CSS (Bootstrap) e JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
+}

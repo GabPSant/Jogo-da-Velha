@@ -1,0 +1,297 @@
+{
+    "palavras": [
+      {
+        "palavra": "abacate",
+        "dica": "Uma fruta verde e cremosa."
+      },
+      {
+        "palavra": "bicicleta",
+        "dica": "Um meio de transporte de duas rodas."
+      },
+      {
+        "palavra": "computador",
+        "dica": "Uma máquina que processa informações."
+      },
+      {
+        "palavra": "dinossauro",
+        "dica": "Uma criatura extinta que viveu há milhões de anos."
+      },
+      {
+        "palavra": "elefante",
+        "dica": "O maior animal terrestre do planeta."
+      },
+      {
+        "palavra": "flamenco",
+        "dica": "Um estilo de dança e música espanhola."
+      },
+      {
+        "palavra": "girassol",
+        "dica": "Uma flor que segue o movimento do sol."
+      },
+      {
+        "palavra": "hamburguer",
+        "dica": "Um sanduíche de carne."
+      },
+      {
+        "palavra": "igreja",
+        "dica": "Um local de culto religioso."
+      },
+      {
+        "palavra": "jardineiro",
+        "dica": "Alguém que cuida de plantas e jardins."
+      },
+      {
+        "palavra": "kanguru",
+        "dica": "Um marsupial saltador da Austrália."
+      },
+      {
+        "palavra": "leopardo",
+        "dica": "Um grande felino com manchas."
+      },
+      {
+        "palavra": "montanha",
+        "dica": "Uma elevação natural da terra."
+      },
+      {
+        "palavra": "navio",
+        "dica": "Uma embarcação que navega na água."
+      },
+      {
+        "palavra": "ocidental",
+        "dica": "Relativo ao Oeste."
+      },
+      {
+        "palavra": "piano",
+        "dica": "Um instrumento musical de teclas."
+      },
+      {
+        "palavra": "quadrado",
+        "dica": "Uma forma com quatro lados iguais."
+      },
+      {
+        "palavra": "rio",
+        "dica": "Uma corrente de água natural."
+      },
+      {
+        "palavra": "sol",
+        "dica": "A estrela central do nosso sistema solar."
+      },
+      {
+        "palavra": "tartaruga",
+        "dica": "Um réptil de casca dura."
+      },
+      {
+        "palavra": "uva",
+        "dica": "Uma fruta pequena e doce."
+      },
+      {
+        "palavra": "ventilador",
+        "dica": "Um aparelho que circula o ar."
+      },
+      {
+        "palavra": "xadrez",
+        "dica": "Um jogo de tabuleiro estratégico."
+      },
+      {
+        "palavra": "yoga",
+        "dica": "Uma prática de relaxamento e exercícios."
+      },
+      {
+        "palavra": "zebra",
+        "dica": "Um animal listrado da África."
+      },
+      {
+        "palavra": "aventura",
+        "dica": "Uma jornada emocionante e arriscada."
+      },
+      {
+        "palavra": "banquete",
+        "dica": "Uma festa com muita comida e bebida."
+      },
+      {
+        "palavra": "cacau",
+        "dica": "A semente usada para fazer chocolate."
+      },
+      {
+        "palavra": "deserto",
+        "dica": "Uma área árida e sem vegetação."
+      },
+      {
+        "palavra": "eletricidade",
+        "dica": "A forma de energia associada a cargas elétricas."
+      },
+      {
+        "palavra": "floresta",
+        "dica": "Uma grande área coberta por árvores e vegetação."
+      },
+      {
+        "palavra": "girafa",
+        "dica": "Um mamífero de pescoço longo."
+      },
+      {
+        "palavra": "helicóptero",
+        "dica": "Uma aeronave com hélices que pode pairar no ar."
+      },
+      {
+        "palavra": "iluminar",
+        "dica": "Tornar algo mais brilhante com luz."
+      },
+      {
+        "palavra": "jardineiro",
+        "dica": "Alguém que cuida de plantas e jardins."
+      },
+      {
+        "palavra": "kanguru",
+        "dica": "Um marsupial saltador da Austrália."
+      },
+      {
+        "palavra": "leopardo",
+        "dica": "Um grande felino com manchas."
+      },
+      {
+        "palavra": "montanha",
+        "dica": "Uma elevação natural da terra."
+      },
+      {
+        "palavra": "navio",
+        "dica": "Uma embarcação que navega na água."
+      },
+      {
+        "palavra": "ocidental",
+        "dica": "Relativo ao Oeste."
+      },
+      {
+        "palavra": "piano",
+        "dica": "Um instrumento musical de teclas."
+      },
+      {
+        "palavra": "quadrado",
+        "dica": "Uma forma com quatro lados iguais."
+      },
+      {
+        "palavra": "rio",
+        "dica": "Uma corrente de água natural."
+      },
+      {
+        "palavra": "sol",
+        "dica": "A estrela central do nosso sistema solar."
+      },
+      {
+        "palavra": "tartaruga",
+        "dica": "Um réptil de casca dura."
+      },
+      {
+        "palavra": "uva",
+        "dica": "Uma fruta pequena e doce."
+      },
+      {
+        "palavra": "ventilador",
+        "dica": "Um aparelho que circula o ar."
+      },
+      {
+        "palavra": "xadrez",
+        "dica": "Um jogo de tabuleiro estratégico."
+      },
+      {
+        "palavra": "yoga",
+        "dica": "Uma prática de relaxamento e exercícios."
+      },
+      {
+        "palavra": "zebra",
+        "dica": "Um animal listrado da África."
+      },
+      {
+        "palavra": "baleia",
+        "dica": "Um gigante do mar que se alimenta de plâncton."
+      },
+      {
+        "palavra": "carrossel",
+        "dica": "Uma atração de parque de diversões com cavalos."
+      },
+      {
+        "palavra": "divertido",
+        "dica": "Algo que é engraçado e alegre."
+      },
+      {
+        "palavra": "escorregar",
+        "dica": "Deslizar rapidamente em uma superfície lisa."
+      },
+      {
+        "palavra": "fantasma",
+        "dica": "Uma assombração ou espírito."
+      },
+      {
+        "palavra": "guitarra",
+        "dica": "Um instrumento musical de cordas."
+      },
+      {
+        "palavra": "hipopótamo",
+        "dica": "Um grande mamífero aquático."
+      },
+      {
+        "palavra": "iglu",
+        "dica": "Uma habitação de gelo dos povos inuítes."
+      },
+      {
+        "palavra": "jazz",
+        "dica": "Um gênero musical improvisado e animado."
+      },
+      {
+        "palavra": "kiwi",
+        "dica": "Uma fruta pequena e peluda."
+      },
+      {
+        "palavra": "lápis",
+        "dica": "Uma ferramenta para escrever ou desenhar."
+      },
+      {
+        "palavra": "máquina",
+        "dica": "Um dispositivo mecânico que executa tarefas."
+      },
+      {
+        "palavra": "noturno",
+        "dica": "Relativo à noite."
+      },
+      {
+        "palavra": "oculos",
+        "dica": "Um acessório para melhorar a visão."
+      },
+      {
+        "palavra": "pintura",
+        "dica": "Uma forma de arte visual."
+      },
+      {
+        "palavra": "quadrinhos",
+        "dica": "Histórias ilustradas em revistas."
+      },
+      {
+        "palavra": "rato",
+        "dica": "Um pequeno roedor."
+      },
+      {
+        "palavra": "sapato",
+        "dica": "Um calçado para proteger os pés."
+      },
+      {
+        "palavra": "tubarão",
+        "dica": "Um predador marinho de grandes dentes."
+      },
+      {
+        "palavra": "urso",
+        "dica": "Um grande mamífero carnívoro."
+      },
+      {
+        "palavra": "vampiro",
+        "dica": "Uma criatura mítica que se alimenta de sangue."
+      },
+      {
+        "palavra": "xícara",
+        "dica": "Um recipiente para bebidas quentes."
+      },
+      {
+        "palavra": "zumbi",
+        "dica": "Um morto-vivo que anda à noite."
+      }
+    ]
+  }
+  
