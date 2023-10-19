@@ -1,6 +1,5 @@
 "use strict";
 var _a, _b;
-//import { assert } from "requirejs";
 //Object.defineProperty(exports, "__esModule", { value: true });
 import palavras_json_1 from "./json/palavras.json" assert {type: "json"}; //Depois mandar o JSON para o discord do grupo da Softex
 var palavra = document === null || document === void 0 ? void 0 : document.querySelector("#palavra");
@@ -95,6 +94,8 @@ var botoes = document.querySelectorAll(".botao");
 botoes.forEach(function (botao) {
     document.addEventListener("keydown", function (e) {
         var chave = e.key.toUpperCase();
+        if (finalizar.classList.contains("show"))
+            return;
         if (/^([A-Z]){1}$/.test(chave) && chave == botao.innerText) {
             //Tentar resolver o problema das letras repetidas
             botao.click();

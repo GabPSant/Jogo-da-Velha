@@ -1,10 +1,10 @@
-import conjunto from './json/palavras.json' assert {type: "json"};//Depois mandar o JSON para o discord do grupo da Softex
+import conjunto from './json/palavras.json';//Depois mandar o JSON para o discord do grupo da Softex
 
 const palavra = <HTMLUListElement>document?.querySelector("#palavra");
 
 const imagemEnforcado = <HTMLImageElement>document?.querySelector("aside")?.querySelector("img");
 const incorretas = <HTMLHRElement>document?.querySelector("#tentativas_erradas")?.querySelector("span");
-const finalizar = document.querySelector("#finalizar") as any;
+const finalizar:any = document.querySelector("#finalizar");
 const jogarNovamente = <HTMLButtonElement>document?.querySelector(".play-again");
 
 let palavraAtual:string, letrasCorretas:string[], tentativas:number;
@@ -51,8 +51,7 @@ function resetarJogo() {
 
 function getPalavraAleatoria() {
 
-  const { palavra, dica } =
-    conjunto.palavras[Math.floor(Math.random() * conjunto.palavras.length)];
+  const { palavra, dica } = conjunto.palavras[Math.floor(Math.random() * conjunto.palavras.length)];
 
   palavraAtual = palavra.toUpperCase();
 
@@ -125,6 +124,7 @@ botoes.forEach((botao:any) => {
     "keydown",
     (e) => {
       let chave = e.key.toUpperCase();
+      if(finalizar.classList.contains("show")) return;
 
       if (/^([A-Z]){1}$/.test(chave) && chave == botao.innerText) {
         //Tentar resolver o problema das letras repetidas
