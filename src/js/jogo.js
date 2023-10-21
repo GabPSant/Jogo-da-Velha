@@ -1,7 +1,7 @@
 "use strict";
 var _a, _b;
 //Object.defineProperty(exports, "__esModule", { value: true });
-import palavras_json_1 from "./json/palavras.json" assert {type: "json"}; //Depois mandar o JSON para o discord do grupo da Softex
+import palavras_json_1 from "./../json/palavras.json" assert {type: "json"}; //Depois mandar o JSON para o discord do grupo da Softex
 var palavra = document === null || document === void 0 ? void 0 : document.querySelector("#palavra");
 var imagemEnforcado = (_a = document === null || document === void 0 ? void 0 : document.querySelector("aside")) === null || _a === void 0 ? void 0 : _a.querySelector("img");
 var incorretas = (_b = document === null || document === void 0 ? void 0 : document.querySelector("#tentativas_erradas")) === null || _b === void 0 ? void 0 : _b.querySelector("span");

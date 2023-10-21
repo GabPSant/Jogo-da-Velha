@@ -1,4 +1,4 @@
-import conjunto from './json/palavras.json';//Depois mandar o JSON para o discord do grupo da Softex
+import conjunto from './../json/palavras.json';//Depois mandar o JSON para o discord do grupo da Softex
 
 const palavra = <HTMLUListElement>document?.querySelector("#palavra");
 

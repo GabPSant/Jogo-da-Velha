@@ -4,6 +4,7 @@
   "description": "- Jogo da forca feito usando HTML, CSS (Bootstrap) e JavaScript",
   "main": "index.js",
   "scripts": {
+    "dev": "npx webpack -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -11,6 +12,8 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.8.7",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
   }
 }
