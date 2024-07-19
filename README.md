@@ -1,4 +1,4 @@
-# [Jogo da Forca (demo-link)](https://gabpsant.github.io/Jogo-da-Forca/)
+# [Jogo da Forca (demo-link)](https://sansao77.github.io/Jogo-da-Forca/)
 
 - Jogo da forca feito usando HTML, CSS (Bootstrap) e JavaScript
 
